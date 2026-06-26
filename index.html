@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{font-family:'Hanken Grotesk',system-ui,sans-serif;background:#ffffff;color:#1a1a18;-webkit-font-smoothing:antialiased}
+  ::placeholder{color:#9a9a93}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:#e0e0db;border-radius:10px;border:3px solid #fff}
+</style>
+</helmet>
+
+<div style="display:flex;height:100vh;width:100%;overflow:hidden;background:#fff">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside style="width:248px;flex:none;background:#f5f5f3;border-right:1px solid #e7e7e3;display:flex;flex-direction:column;padding:26px 16px 18px">
+    <div style="display:flex;align-items:center;gap:9px;padding:0 8px 30px">
+      <div style="width:24px;height:24px;border-radius:7px;background:#1a1a18;display:flex;align-items:center;justify-content:center">
+        <div style="width:9px;height:9px;border:2px solid #fff;border-radius:3px"></div>
+      </div>
+      <span style="font-size:22px;font-weight:800;letter-spacing:-0.02em">Cleartrack</span>
+    </div>
+
+    <nav style="display:flex;flex-direction:column;gap:2px">
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:9px;color:#56564f;font-size:14.5px;font-weight:600;text-decoration:none" style-hover="background:#ececE8;color:#1a1a18">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1.5" y="1.5" width="6.5" height="6.5" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="10" y="1.5" width="6.5" height="6.5" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="1.5" y="10" width="6.5" height="6.5" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="10" y="10" width="6.5" height="6.5" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>
+        Dashboard
+      </a>
+
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:9px;color:#1a1a18;font-size:14.5px;font-weight:700;text-decoration:none;background:#e6e6e1">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1.5" y="3" width="15" height="9.5" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M5 15.5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Hardware
+      </a>
+
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:9px;color:#56564f;font-size:14.5px;font-weight:600;text-decoration:none" style-hover="background:#ececE8;color:#1a1a18">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="9" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
+        Software
+      </a>
+
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:9px;color:#56564f;font-size:14.5px;font-weight:600;text-decoration:none" style-hover="background:#ececE8;color:#1a1a18">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="6" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 15.5c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Employees
+      </a>
+
+      <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:9px 10px;border-radius:9px;color:#56564f;font-size:14.5px;font-weight:600;text-decoration:none" style-hover="background:#ececE8;color:#1a1a18">
+        <span style="display:flex;align-items:center;gap:12px">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="2" width="12" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M6 6h6M6 9h6M6 12h3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Requests
+        </span>
+        <span style="font-size:11px;font-weight:700;background:#1a1a18;color:#fff;border-radius:20px;padding:1px 7px">5</span>
+      </a>
+
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:9px;color:#56564f;font-size:14.5px;font-weight:600;text-decoration:none" style-hover="background:#ececE8;color:#1a1a18">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15V8M9 15V3M15 15v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Reports
+      </a>
+    </nav>
+
+    <div style="margin-top:auto;border-top:1px solid #e7e7e3;padding-top:12px">
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:9px;color:#56564f;font-size:14.5px;font-weight:600;text-decoration:none" style-hover="background:#ececE8;color:#1a1a18">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="2.6" stroke="currentColor" stroke-width="1.6"/><path d="M9 1.5v2M9 14.5v2M16.5 9h-2M3.5 9h-2M14.3 3.7l-1.4 1.4M5.1 12.9l-1.4 1.4M14.3 14.3l-1.4-1.4M5.1 5.1L3.7 3.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Settings
+      </a>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 10px 2px">
+        <div style="width:30px;height:30px;border-radius:50%;background:#d9d9d2;flex:none;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#56564f">SM</div>
+        <div style="min-width:0">
+          <div style="font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Sofia Markova</div>
+          <div style="font-size:11.5px;color:#8a8a82">IT Administrator</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main style="flex:1;min-width:0;display:flex;flex-direction:column;background:#fff">
+
+    <!-- top bar -->
+    <header style="height:62px;flex:none;border-bottom:1px solid #ededea;display:flex;align-items:center;justify-content:space-between;padding:0 34px">
+      <div></div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <button style="width:38px;height:38px;border-radius:9px;border:none;background:transparent;color:#56564f;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#f2f2ef">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.7"/><path d="m12.5 12.5 3 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </button>
+        <button style="width:38px;height:38px;border-radius:9px;border:none;background:transparent;color:#56564f;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative" style-hover="background:#f2f2ef">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4.5 7a4.5 4.5 0 0 1 9 0c0 4 1.5 5 1.5 5H3s1.5-1 1.5-5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7.5 15a1.7 1.7 0 0 0 3 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span style="position:absolute;top:8px;right:9px;width:7px;height:7px;border-radius:50%;background:#d4663a;border:1.5px solid #fff"></span>
+        </button>
+        <div style="width:1px;height:24px;background:#ededea;margin:0 6px"></div>
+        <div style="display:flex;align-items:center;gap:9px;cursor:pointer">
+          <div style="width:30px;height:30px;border-radius:50%;background:#d9d9d2;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#56564f">SM</div>
+          <span style="font-size:13.5px;font-weight:600">Sofia Markova</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- content -->
+    <div style="flex:1;min-height:0;overflow:auto;padding:30px 34px 40px">
+
+      <!-- heading row -->
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:24px">
+        <div>
+          <h1 style="font-size:38px;font-weight:800;letter-spacing:-0.025em;line-height:1">Hardware</h1>
+          <p style="font-size:14.5px;color:#8a8a82;margin-top:10px;font-weight:500">{{ countLabel }}</p>
+        </div>
+        <button onClick="{{ onAdd }}" style="display:flex;align-items:center;gap:9px;background:#1a1a18;color:#fff;border:none;border-radius:11px;padding:13px 20px;font-size:14.5px;font-weight:700;cursor:pointer;font-family:inherit;flex:none" style-hover="background:#000">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2.5v11M2.5 8h11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Add hardware
+        </button>
+      </div>
+
+      <!-- toolbar -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap">
+        <div style="position:relative;flex:1;min-width:240px;max-width:380px">
+          <svg width="17" height="17" viewBox="0 0 18 18" fill="none" style="position:absolute;left:13px;top:50%;transform:translateY(-50%);color:#9a9a93"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.7"/><path d="m12.5 12.5 3 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <input placeholder="Search by name, model or serial number" style="width:100%;height:44px;border:1px solid #e7e7e3;background:#f7f7f5;border-radius:11px;padding:0 14px 0 38px;font-size:14px;font-family:inherit;color:#1a1a18;outline:none" style-focus="border-color:#c9c9c2;background:#fff" />
+        </div>
+
+        <button style="display:flex;align-items:center;gap:9px;height:44px;padding:0 15px;border:1px solid #e7e7e3;background:#fff;border-radius:11px;font-size:14px;font-weight:600;color:#3a3a35;cursor:pointer;font-family:inherit" style-hover="border-color:#c9c9c2;background:#fafaf8">
+          Status <span style="color:#9a9a93;font-weight:500">All</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button style="display:flex;align-items:center;gap:9px;height:44px;padding:0 15px;border:1px solid #e7e7e3;background:#fff;border-radius:11px;font-size:14px;font-weight:600;color:#3a3a35;cursor:pointer;font-family:inherit" style-hover="border-color:#c9c9c2;background:#fafaf8">
+          Location <span style="color:#9a9a93;font-weight:500">All</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button style="display:flex;align-items:center;gap:9px;height:44px;padding:0 15px;border:1px solid #e7e7e3;background:#fff;border-radius:11px;font-size:14px;font-weight:600;color:#3a3a35;cursor:pointer;font-family:inherit" style-hover="border-color:#c9c9c2;background:#fafaf8">
+          Owner <span style="color:#9a9a93;font-weight:500">All</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <!-- table -->
+      <div style="border:1px solid #ededea;border-radius:14px;overflow:hidden">
+        <!-- header -->
+        <div style="display:grid;grid-template-columns:minmax(190px,1.6fr) 92px 148px 128px 142px 116px 104px 84px;align-items:center;gap:8px;padding:13px 18px;background:#f7f7f5;border-bottom:1px solid #ededea;font-size:11.5px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#9a9a93">
+          <div>Name / model</div>
+          <div>Type</div>
+          <div>Serial number</div>
+          <div>Status</div>
+          <div>Owner</div>
+          <div>Location</div>
+          <div>Warranty</div>
+          <div></div>
+        </div>
+
+        <!-- rows -->
+        <sc-for list="{{ rows }}" as="item" hint-placeholder-count="9">
+          <div onClick="{{ item.onOpen }}" style="display:grid;grid-template-columns:minmax(190px,1.6fr) 92px 148px 128px 142px 116px 104px 84px;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid #f1f1ee;cursor:pointer;background:#fff" style-hover="background:#faf9f7">
+            <div style="display:flex;align-items:center;gap:12px;min-width:0">
+              <div style="width:34px;height:34px;border-radius:9px;background:#f2f2ee;border:1px solid #ebebE6;flex:none;display:flex;align-items:center;justify-content:center;color:#8a8a82">
+                <svg width="17" height="17" viewBox="0 0 18 18" fill="none"><rect x="2" y="3.5" width="14" height="9" rx="1.4" stroke="currentColor" stroke-width="1.5"/><path d="M5 15h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div style="font-size:14.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ item.name }}</div>
+            </div>
+            <div style="font-size:13.5px;color:#56564f;font-weight:500">{{ item.type }}</div>
+            <div style="font-size:13px;color:#8a8a82;font-family:ui-monospace,'SF Mono',Menlo,monospace;letter-spacing:-0.01em">{{ item.serial }}</div>
+            <div>
+              <span style="display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border:1px solid #eaeae5;border-radius:100px;font-size:12.5px;font-weight:600;color:#3a3a35;background:#fff">
+                <span style="width:7px;height:7px;border-radius:50%;flex:none;background:{{ item.dot }}"></span>
+                {{ item.statusLabel }}
+              </span>
+            </div>
+            <div style="font-size:13.5px;font-weight:600;color:{{ item.ownerColor }};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ item.owner }}</div>
+            <div style="font-size:13.5px;color:#56564f;font-weight:500">{{ item.location }}</div>
+            <div style="font-size:13.5px;font-weight:600;color:{{ item.warrantyColor }}">{{ item.warranty }}</div>
+            <div style="display:flex;justify-content:flex-end;align-items:center;gap:4px">
+              <button onClick="{{ item.onIssue }}" title="Issue to employee" style="font-size:12.5px;font-weight:700;color:#3a3a35;background:#fff;border:1px solid #e0e0db;border-radius:8px;padding:6px 11px;cursor:pointer;font-family:inherit" style-hover="border-color:#1a1a18;background:#1a1a18;color:#fff">Issue</button>
+              <span style="color:#c4c4bd;display:flex;align-items:center">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="m6 3.5 4.5 4.5L6 12.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:16px;font-size:13px;color:#9a9a93;font-weight:500">
+        <span>{{ countLabel }}</span>
+        <span>Click a row to open the device panel</span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== HARDWARE_ITEM SIDE PANEL ===== -->
+  <div onClick="{{ onClose }}" style="position:fixed;inset:0;background:rgba(26,26,24,0.30);opacity:{{ scrimOpacity }};pointer-events:{{ scrimEvents }};transition:opacity .28s ease;z-index:40"></div>
+
+  <aside style="position:fixed;top:0;right:0;height:100vh;width:472px;max-width:92vw;background:#fff;border-left:1px solid #e7e7e3;box-shadow:-18px 0 50px rgba(26,26,24,0.10);transform:{{ panelTransform }};transition:transform .32s cubic-bezier(.4,0,.2,1);z-index:41;display:flex;flex-direction:column">
+
+    <!-- header -->
+    <div style="flex:none;display:flex;align-items:center;justify-content:space-between;padding:17px 22px;border-bottom:1px solid #ededea">
+      <span style="font-size:11.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#9a9a93">Device</span>
+      <button onClick="{{ onClose }}" style="width:34px;height:34px;border-radius:9px;border:none;background:#f4f4f1;color:#56564f;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#e9e9e4">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="m3.5 3.5 8 8M11.5 3.5l-8 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <!-- body -->
+    <div style="flex:1;min-height:0;overflow:auto;padding:24px 22px 26px">
+
+      <!-- title -->
+      <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:22px">
+        <div style="width:48px;height:48px;border-radius:12px;background:#f2f2ee;border:1px solid #ebebE6;flex:none;display:flex;align-items:center;justify-content:center;color:#8a8a82">
+          <svg width="24" height="24" viewBox="0 0 18 18" fill="none"><rect x="2" y="3.5" width="14" height="9" rx="1.4" stroke="currentColor" stroke-width="1.5"/><path d="M5 15h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div style="min-width:0;flex:1">
+          <h2 style="font-size:23px;font-weight:800;letter-spacing:-0.02em;line-height:1.15">{{ dvName }}</h2>
+          <div style="display:flex;align-items:center;gap:9px;margin-top:7px">
+            <span style="font-size:13.5px;color:#8a8a82;font-weight:600">{{ dvType }}</span>
+            <span style="color:#d5d5cf">·</span>
+            <span style="font-size:12.5px;color:#8a8a82;font-family:ui-monospace,'SF Mono',Menlo,monospace">{{ dvSerial }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- status / owner card -->
+      <div style="border:1px solid #ededea;border-radius:14px;padding:16px 18px;margin-bottom:24px;background:#fbfbf9">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#9a9a93">Status</div>
+          <span style="display:inline-flex;align-items:center;gap:7px;padding:5px 12px;border:1px solid #eaeae5;border-radius:100px;font-size:13px;font-weight:600;color:#3a3a35;background:#fff">
+            <span style="width:8px;height:8px;border-radius:50%;background:{{ dvDot }}"></span>{{ dvStatusLabel }}
+          </span>
+        </div>
+        <div style="height:1px;background:#ededea;margin:14px 0"></div>
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#9a9a93;margin-bottom:11px">Current owner</div>
+        <sc-if value="{{ dvAssigned }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:38px;height:38px;border-radius:50%;background:#e2e2db;flex:none;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#56564f">{{ dvInitials }}</div>
+            <div>
+              <div style="font-size:14.5px;font-weight:700">{{ dvOwner }}</div>
+              <div style="font-size:12.5px;color:#8a8a82">{{ dvDept }} · since {{ dvSince }}</div>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ dvFree }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;align-items:center;gap:11px;color:#8a8a82">
+            <div style="width:38px;height:38px;border-radius:50%;border:1.5px dashed #cfcfc7;flex:none;display:flex;align-items:center;justify-content:center;color:#bdbdb6">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 15c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div style="font-size:14px;font-weight:600">Not assigned · in free pool</div>
+          </div>
+        </sc-if>
+      </div>
+
+      <!-- details -->
+      <div style="font-size:11.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#9a9a93;margin-bottom:14px">Details</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px 16px;margin-bottom:28px">
+        <div><div style="font-size:12px;color:#9a9a93;font-weight:600;margin-bottom:4px">Type</div><div style="font-size:14px;font-weight:600">{{ dvType }}</div></div>
+        <div><div style="font-size:12px;color:#9a9a93;font-weight:600;margin-bottom:4px">Serial number</div><div style="font-size:13.5px;font-weight:600;font-family:ui-monospace,'SF Mono',Menlo,monospace">{{ dvSerial }}</div></div>
+        <div><div style="font-size:12px;color:#9a9a93;font-weight:600;margin-bottom:4px">Location</div><div style="font-size:14px;font-weight:600">{{ dvLocation }}</div></div>
+        <div><div style="font-size:12px;color:#9a9a93;font-weight:600;margin-bottom:4px">Purchase date</div><div style="font-size:14px;font-weight:600">{{ dvPurchase }}</div></div>
+        <div><div style="font-size:12px;color:#9a9a93;font-weight:600;margin-bottom:4px">Warranty end</div><div style="font-size:14px;font-weight:600;color:{{ dvWarrantyColor }}">{{ dvWarranty }}</div></div>
+        <div><div style="font-size:12px;color:#9a9a93;font-weight:600;margin-bottom:4px">Cost</div><div style="font-size:14px;font-weight:600">{{ dvCost }}</div></div>
+      </div>
+
+      <!-- history log -->
+      <div style="font-size:11.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#9a9a93;margin-bottom:3px">History log</div>
+      <div style="font-size:12.5px;color:#9a9a93;margin-bottom:18px">Assignments, returns, repairs and status changes</div>
+      <div>
+        <sc-for list="{{ histRows }}" as="ev" hint-placeholder-count="3">
+          <div style="display:flex;gap:14px">
+            <div style="display:flex;flex-direction:column;align-items:center;flex:none">
+              <span style="width:11px;height:11px;border-radius:50%;background:{{ ev.color }};box-shadow:0 0 0 3px #fff,0 0 0 4px #eaeae5;margin-top:4px"></span>
+              <span style="width:2px;flex:1;background:#ededea;margin:5px 0"></span>
+            </div>
+            <div style="display:flex;justify-content:space-between;gap:12px;flex:1;min-width:0;padding-bottom:20px">
+              <div style="min-width:0">
+                <div style="font-size:14px;font-weight:700;line-height:1.3">{{ ev.title }}</div>
+                <div style="font-size:12.5px;color:#8a8a82;margin-top:3px">{{ ev.meta }}</div>
+              </div>
+              <div style="font-size:12px;color:#9a9a93;font-weight:600;white-space:nowrap;flex:none;margin-top:1px">{{ ev.date }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+    </div>
+
+    <!-- footer actions -->
+    <div style="flex:none;border-top:1px solid #ededea;padding:14px 22px;display:flex;gap:10px;background:#fff">
+      <button onClick="{{ onChangeStatus }}" style="flex:1;height:46px;border:1px solid #e0e0db;background:#fff;border-radius:11px;font-size:14px;font-weight:700;color:#3a3a35;cursor:pointer;font-family:inherit" style-hover="border-color:#c9c9c2;background:#fafaf8">Change status</button>
+      <button onClick="{{ onPrimary }}" style="flex:1.35;height:46px;border:none;background:#1a1a18;color:#fff;border-radius:11px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit" style-hover="background:#000">{{ dvPrimaryLabel }}</button>
+    </div>
+  </aside>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;monochromeStatus&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { device: null, open: false };
+
+  data() {
+    return [
+      { name:'MacBook Pro 14" M3', type:'Laptop', serial:'C02XR3WXJG5H', status:'assigned', owner:'Anna Sokolova', dept:'Design', since:'14 Mar 2024', location:'Moscow HQ', purchase:'12 Mar 2024', cost:'$2,490', warranty:'Mar 2027',
+        history:[
+          {kind:'assigned', title:'Issued to Anna Sokolova', meta:'Design · by Sofia Markova', date:'14 Mar 2024'},
+          {kind:'added',    title:'Added to inventory',      meta:'Invoice #INV-2041 · by Sofia Markova', date:'12 Mar 2024'},
+        ]},
+      { name:'Dell Latitude 7440', type:'Laptop', serial:'5KJ8L2N', status:'free', owner:'—', location:'Moscow HQ', purchase:'15 Aug 2024', cost:'$1,310', warranty:'Sep 2026',
+        history:[
+          {kind:'returned', title:'Returned to free pool', meta:'from Oleg Kuznetsov', date:'02 Feb 2026'},
+          {kind:'assigned', title:'Issued to Oleg Kuznetsov', meta:'Engineering · by Sofia Markova', date:'18 Aug 2024'},
+          {kind:'added',    title:'Added to inventory', meta:'Invoice #INV-2188', date:'15 Aug 2024'},
+        ]},
+      { name:'Dell U2723QE', type:'Monitor', serial:'CN-0K1L2M', status:'assigned', owner:'Igor Petrov', dept:'Sales', since:'21 Jan 2025', location:'Berlin Office', purchase:'10 Nov 2023', cost:'$640', warranty:'Nov 2026',
+        history:[
+          {kind:'assigned', title:'Issued to Igor Petrov', meta:'Sales · by Sofia Markova', date:'21 Jan 2025'},
+          {kind:'status',   title:'Moved to Berlin Office', meta:'Location updated', date:'20 Jan 2025'},
+          {kind:'added',    title:'Added to inventory', meta:'Invoice #INV-1604', date:'10 Nov 2023'},
+        ]},
+      { name:'iPhone 14', type:'Phone', serial:'F2LXK9P', status:'assigned', owner:'Maria Ivanova', dept:'Marketing', since:'09 Sep 2024', location:'Remote', purchase:'05 Sep 2024', cost:'$820', warranty:'Jan 2027',
+        history:[
+          {kind:'assigned', title:'Issued to Maria Ivanova', meta:'Marketing · by Sofia Markova', date:'09 Sep 2024'},
+          {kind:'added',    title:'Added to inventory', meta:'Invoice #INV-2210', date:'05 Sep 2024'},
+        ]},
+      { name:'Lenovo ThinkPad X1', type:'Laptop', serial:'PF3R8K2', status:'in_repair', owner:'Pavel Volkov', dept:'Engineering', since:'03 Mar 2025', location:'Moscow HQ', purchase:'28 Feb 2025', cost:'$1,790', warranty:'Aug 2026',
+        history:[
+          {kind:'repair_in', title:'Sent for repair', meta:'Keyboard replacement · service ticket #RP-118', date:'11 Jun 2026'},
+          {kind:'assigned',  title:'Issued to Pavel Volkov', meta:'Engineering · by Sofia Markova', date:'03 Mar 2025'},
+          {kind:'added',     title:'Added to inventory', meta:'Invoice #INV-2402', date:'28 Feb 2025'},
+        ]},
+      { name:'MacBook Air M2', type:'Laptop', serial:'C02GH5TXMD', status:'assigned', owner:'Dmitry Orlov', dept:'Product', since:'22 Apr 2024', location:'Remote', purchase:'18 Apr 2024', cost:'$1,250', warranty:'Jul 2026', warn:true,
+        history:[
+          {kind:'assigned', title:'Issued to Dmitry Orlov', meta:'Product · by Sofia Markova', date:'22 Apr 2024'},
+          {kind:'added',    title:'Added to inventory', meta:'Invoice #INV-2066', date:'18 Apr 2024'},
+        ]},
+      { name:'Logitech MX Keys', type:'Keyboard', serial:'2148LZ0', status:'free', owner:'—', location:'Storage', purchase:'28 May 2024', cost:'$95', warranty:'Feb 2027',
+        history:[
+          {kind:'returned', title:'Returned to free pool', meta:'from Elena Smirnova', date:'12 Mar 2026'},
+          {kind:'assigned', title:'Issued to Elena Smirnova', meta:'Support · by Sofia Markova', date:'01 Jun 2024'},
+          {kind:'added',    title:'Added to inventory', meta:'Invoice #INV-2099', date:'28 May 2024'},
+        ]},
+      { name:'iPad Pro 11"', type:'Tablet', serial:'DLXR2P9K', status:'free', owner:'—', location:'Moscow HQ', purchase:'14 Feb 2025', cost:'$910', warranty:'Feb 2028',
+        history:[
+          {kind:'added', title:'Added to inventory', meta:'Invoice #INV-2388 · by Sofia Markova', date:'14 Feb 2025'},
+        ]},
+      { name:'Samsung S27A800', type:'Monitor', serial:'S27A800NU', status:'retired', owner:'—', location:'Storage', purchase:'05 Jan 2023', cost:'$430', warranty:'Expired',
+        history:[
+          {kind:'retired',  title:'Marked as retired', meta:'End of life · by Sofia Markova', date:'30 Apr 2026'},
+          {kind:'returned', title:'Returned to free pool', meta:'from Roman Belov', date:'15 Apr 2026'},
+          {kind:'assigned', title:'Issued to Roman Belov', meta:'Design · by Sofia Markova', date:'10 Jan 2023'},
+          {kind:'added',    title:'Added to inventory', meta:'Invoice #INV-1320', date:'05 Jan 2023'},
+        ]},
+      { name:'Cisco Catalyst 9200', type:'Network', serial:'FCW2310L0XY', status:'assigned', owner:'IT Department', dept:'Infrastructure', since:'12 May 2024', location:'Server Room', purchase:'08 May 2024', cost:'$3,200', warranty:'May 2028',
+        history:[
+          {kind:'assigned', title:'Assigned to IT Department', meta:'Infrastructure · by Sofia Markova', date:'12 May 2024'},
+          {kind:'added',    title:'Added to inventory', meta:'Invoice #INV-2074', date:'08 May 2024'},
+        ]},
+      { name:'HP LaserJet M428', type:'Printer', serial:'VNB3K8L9', status:'free', owner:'—', location:'Berlin Office', purchase:'02 Oct 2023', cost:'$380', warranty:'Oct 2026',
+        history:[
+          {kind:'returned', title:'Returned to free pool', meta:'from Berlin Office', date:'20 Oct 2025'},
+          {kind:'added',    title:'Added to inventory', meta:'Invoice #INV-1571', date:'02 Oct 2023'},
+        ]},
+    ];
+  }
+
+  renderVals() {
+    const mono = this.props.monochromeStatus ?? false;
+    const palette = {
+      free:      mono ? '#1a1a18' : '#3f9b6b',
+      assigned:  mono ? '#1a1a18' : '#4a76c4',
+      in_repair: mono ? '#9a9a93' : '#c98a3a',
+      retired:   '#c4c4bd',
+    };
+    const labels = { free:'Free', assigned:'Assigned', in_repair:'In repair', retired:'Retired' };
+    const data = this.data();
+
+    const rows = data.map((d) => ({
+      ...d,
+      statusLabel: labels[d.status],
+      dot: palette[d.status],
+      ownerColor: d.owner === '—' ? '#bdbdb6' : '#1a1a18',
+      warrantyColor: d.status === 'retired' ? '#bdbdb6' : (d.warn ? '#c0612f' : '#56564f'),
+      onOpen: () => this.openItem(d),
+      onIssue: (e) => { e.stopPropagation(); this.issueItem(d); },
+    }));
+
+    // ---- side panel ----
+    const open = this.state.open;
+    const d = this.state.device || {};
+    const assigned = !!(d.owner && d.owner !== '—');
+    const histColor = { assigned:'#4a76c4', returned:'#8a8a82', repair_in:'#c98a3a', repair_out:'#c98a3a', status:'#56564f', added:'#3f9b6b', retired:'#bdbdb6' };
+    const primary = { free:'Issue to employee', assigned:'Return device', in_repair:'Mark as repaired', retired:'Reactivate' };
+    const initials = assigned ? d.owner.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase() : '';
+
+    return {
+      rows,
+      countLabel: data.length + ' devices · ' + data.filter(d=>d.status==='free').length + ' free · ' + data.filter(d=>d.status==='assigned').length + ' assigned',
+      onAdd: () => this.addItem(),
+
+      panelTransform: open ? 'translateX(0)' : 'translateX(100%)',
+      scrimOpacity: open ? '1' : '0',
+      scrimEvents: open ? 'auto' : 'none',
+      onClose: () => this.setState({ open:false }),
+      onPrimary: () => console.log('open assign_window / status action for', d.name),
+      onChangeStatus: () => console.log('open change-status for', d.name),
+
+      dvName: d.name || '',
+      dvType: d.type || '',
+      dvSerial: d.serial || '',
+      dvStatusLabel: d.status ? labels[d.status] : '',
+      dvDot: d.status ? palette[d.status] : 'transparent',
+      dvAssigned: assigned,
+      dvFree: !!d.name && !assigned,
+      dvOwner: assigned ? d.owner : '',
+      dvInitials: initials,
+      dvDept: d.dept || '',
+      dvSince: d.since || '',
+      dvLocation: d.location || '',
+      dvPurchase: d.purchase || '',
+      dvCost: d.cost || '',
+      dvWarranty: d.warranty || '',
+      dvWarrantyColor: d.status === 'retired' ? '#bdbdb6' : (d.warn ? '#c0612f' : '#1a1a18'),
+      dvPrimaryLabel: d.status ? primary[d.status] : '',
+      histRows: (d.history || []).map(ev => ({ ...ev, color: histColor[ev.kind] || '#8a8a82' })),
+    };
+  }
+
+  openItem(d){ this.setState({ device:d, open:true }); }
+  issueItem(d){ this.setState({ device:d, open:true }); }
+  addItem(){ console.log('open add_item modal'); }
+}
+</script>
+</body>
+</html>
